@@ -40,7 +40,7 @@ We use exactly the same environment configurations as the official verl codebase
 
 Environment setup
 ```bash
-pip install git+ssh://git@github.com/volcengine/verl.git@01ef7184821d0d7844796ec0ced17665c1f50673
+pip install git+https://github.com/volcengine/verl.git@v0.4.1.x
 ```
 
 
