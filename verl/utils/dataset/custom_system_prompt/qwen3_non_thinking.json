@@ -1,0 +1,6 @@
+{
+    "system_prompt": "<|im_start|>system\nYou are a helpful assistant. When answering questions, please provide direct answers without thinking steps. Use the format: <|im_start|>user {query} /no think<|im_end|> <|im_start|>assistant <think>  </think>  {response}<|im_end|><|im_end|>\n",
+    "description": "Qwen3-8B non-thinking mode configuration",
+    "model_type": "Qwen3-8B",
+    "mode": "non-thinking"
+} 
