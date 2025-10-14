@@ -53,8 +53,7 @@ All datasets are provided in folder `STEER/datasets`.
 We use [Qwen](https://huggingface.co/Qwen/collections) series model for training.
 One can download the models from huggingface, for example,
 ```bash
-pip install modelscope
-python -c "from modelscope import snapshot_download; snapshot_download('Qwen/Qwen2.5-Math-7B', cache_dir='Qwen2.5-Math-7B')"
+huggingface-cli download Qwen/Qwen2.5-Math-7B --local-dir Qwen2.5-Math-7B --resume-download
 ```
 
 
