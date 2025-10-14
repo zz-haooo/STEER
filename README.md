@@ -71,7 +71,7 @@ bash run_exp.sh
 
 One can change $\lambda_{\text{min}}$ by tuning:
 
-```diff
+```
 +actor_rollout_ref.actor.policy_loss.token_weight_min
 ```
 
