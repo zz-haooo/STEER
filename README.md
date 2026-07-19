@@ -90,9 +90,27 @@ Note that we run all experiments using 8 H20s.
 If one want to launch distributed tasks, please refer to the instruction of [verl](https://github.com/volcengine/verl/tree/gm-tyx/puffin/main).
 
 
+### Entropy Control Mode
+
+The main experiments in the paper adopt the **symmetric** mode.
+For directional entropy control, we additionally expose an **asymmetric**
+mode that respects the sign of $\Omega$, so that only entropy-decreasing (or entropy-increasing) tokens are
+attenuated while the left tokens are left at weight 1.
+
+Recommended configuration:
+
+```
++actor_rollout_ref.actor.policy_loss.entropy_control_mode=asymmetric
++actor_rollout_ref.actor.policy_loss.token_weight_min=0.9
++actor_rollout_ref.actor.policy_loss.token_weight_max=1.0
+```
+
+See `run/run_asymmetric.sh`.
+
+
 ### Evaluation
 We provide the evaluation codebase integrated in the verl infra.
-Please refer to script eval.sh for evaluation scripts on our [released model](https://huggingface.co/zzzzzzzzzzhao/STEER/tree/main).
+Please refer to script eval.sh for evaluation scripts on our released model on [Huggingface](https://huggingface.co/zzzzzzzzzzhao/STEER/tree/main).
 ```
 cd STEER/run
 bash eval.sh

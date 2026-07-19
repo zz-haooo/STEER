@@ -529,6 +529,7 @@ class DataParallelPPOActor(BasePPOActor):
                         token_weight_min = self.config.get("policy_loss", {}).get("token_weight_min", 0.95)
                         token_weight_max = self.config.get("policy_loss", {}).get("token_weight_max", 1.05)
                         linear = self.config.get("policy_loss", {}).get("linear", True)  # get linear parameter
+                        entropy_control_mode = self.config.get("policy_loss", {}).get("entropy_control_mode", "symmetric")
                         
                         result = compute_policy_loss_with_entropy(
                             old_log_prob=old_log_prob,
@@ -544,6 +545,7 @@ class DataParallelPPOActor(BasePPOActor):
                             token_weight_min=token_weight_min,
                             token_weight_max=token_weight_max,
                             linear=linear,  # linear parameter
+                            entropy_control_mode=entropy_control_mode,
                         )
                         # Now returns 9 values, directly unpack
                         pg_loss, pg_clipfrac, ppo_kl, pg_clipfrac_lower, pg_clipfrac_high, pg_clipfrac_low, clipped_by_high, clipped_by_low, clip_stats = result
