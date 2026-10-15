@@ -101,7 +101,7 @@ Recommended configuration:
 
 ```
 +actor_rollout_ref.actor.policy_loss.entropy_control_mode=asymmetric
-+actor_rollout_ref.actor.policy_loss.token_weight_min=0.9
++actor_rollout_ref.actor.policy_loss.token_weight_min=0.7
 +actor_rollout_ref.actor.policy_loss.token_weight_max=1.0
 ```
 
