@@ -6,7 +6,6 @@
 
 
 
-
 ### Introduction
 
 While Reinforcement Learning with Verifiable Rewards (RLVR) can enhance LLM reasoning, its training process poses a critical risk: Entropy Collapse.
